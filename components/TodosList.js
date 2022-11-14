@@ -1,7 +1,7 @@
 import TodoItem from "./TodoItem";
 
 export default function TodosList() {
-    const TodosList = props => {
+    
         return (
           <ul>
             {props.todos.map(todo => (
@@ -15,5 +15,5 @@ export default function TodosList() {
             ))}
           </ul>
         )
-      }
+      
 }

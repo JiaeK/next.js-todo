@@ -1,7 +1,7 @@
 import { FaPlusCircle } from "react-icons/fa";
 
 export default function InputTodo() {
-    const InputTodo = (props) => {
+    
         const [inputText, setInputText] = useState({
           title: "",
         })
@@ -24,7 +24,7 @@ export default function InputTodo() {
             alert("Please write item")
           } 
         };
-    }
+    
     return (
         <form onSubmit={handleSubmit} className="form-container">
             <input

@@ -2,7 +2,7 @@ import styles from "../styles/TodoItem.module.css"
 import { FaTrash } from "react-icons/fa";
 
 export default function TodoItem() {
-    const TodoItem = (props) => {
+    
         const [editing, setEditing] = useState(false)
       
         useEffect(() => {
@@ -63,5 +63,5 @@ export default function TodoItem() {
             />
           </li>
         )
-      }
+      
 }
