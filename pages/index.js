@@ -4,27 +4,25 @@ import React, { useState, useEffect } from "react"
 
 import Header from "../components/Header"
 import InputTodo from "../components/InputTodo"
-import TodosList from "../components/TodosList";
-import { v4 as uuidv4 } from "uuid";
+import TodosList from "../components/TodosList"
+import { v4 as uuidv4 } from "uuid"
 
 
 export default function TodoContainer() {
-  const TodoContainer = () => {
 
-      const [todos, setTodos] = useState(getInitialTodos())
+
+      const [todos, setTodos] = useState([]);
     
       useEffect(() => {
-        // storing todos items
-        const temp = JSON.stringify(todos)
-        localStorage.setItem("todos", temp)
-      }, [todos])
-    
-      function getInitialTodos() {
-        // getting stored items
-        const temp = localStorage.getItem("todos")
-        const savedTodos = JSON.parse(temp)
-        return savedTodos || [] 
-      }
+        localStorage.setItem('todos', JSON.stringify(todos));
+      }, [todos]);
+      
+      useEffect(() => {
+         const todos = JSON.parse(localStorage.getItem('todos'));
+         if (todos) {
+          setItems(todos);
+         }
+       }, [todos]);
      
       const handleChange = id => {
         setTodos(prevState => prevState.map((todo) => {
@@ -93,5 +91,5 @@ export default function TodoContainer() {
           </body>
         </>
       );
-  }
+  
 }      

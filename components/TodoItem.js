@@ -40,6 +40,7 @@ export default function TodoItem() {
         }
       
         return (
+          <>
           <li className={styles.item}>
             <div onDoubleClick={handleEditing} style={viewMode}>
               <input 
@@ -62,6 +63,7 @@ export default function TodoItem() {
               onKeyDown={handleUpdatedDone}
             />
           </li>
+          </>
         )
       
 }
