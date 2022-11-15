@@ -1,8 +1,7 @@
 import TodoItem from "./TodoItem"
 
-export default function TodosList(props) {
-        return (
-          <>
+export default function TodosList() {
+        return (    
           <ul>
             {props.todos.map(todo => (
               <TodoItem
@@ -14,7 +13,6 @@ export default function TodosList(props) {
               />
             ))}
           </ul>
-          </>
         )
       
 }
