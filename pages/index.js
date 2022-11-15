@@ -76,7 +76,6 @@ export default function TodoContainer() {
             <noscript>You need to enable JavaScript to run this app.</noscript>
             <div id="__next">
             <React.StrictMode>
-              <TodoContainer /> 
               <div className="container">
                 <div className="inner">
                   <Header />
