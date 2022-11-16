@@ -1,7 +1,8 @@
 import styles from "../styles/TodoItem.module.css"
-import { FaTrash } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa"
+import { useState, useEffect } from 'react'
 
-export default function TodoItem() {
+export default function TodoItem(props) {
     
         const [editing, setEditing] = useState(false)
       

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FaPlusCircle } from "react-icons/fa";
 
-export default function InputTodo() {
+export default function InputTodo(props) {
     
         const [inputText, setInputText] = useState({
           title: "",
